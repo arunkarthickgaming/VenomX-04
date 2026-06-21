@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VenomX-04 | Gaming Channel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Orbitron',sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,
+rgba(128,0,255,0.15),
+transparent 70%);
+z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+color:#a855ff;
+text-shadow:0 0 15px #a855ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#a855ff;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+background:url('banner.jpg') center/cover no-repeat;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero img{
+width:220px;
+animation:float 3s ease-in-out infinite;
+filter:drop-shadow(0 0 25px #8b00ff);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+.hero h1{
+font-size:4rem;
+margin-top:20px;
+text-shadow:0 0 25px #a855ff;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:10px;
+color:#ddd;
+}
+
+.btns{
+margin-top:30px;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.youtube{
+background:#ff0000;
+color:white;
+}
+
+.discord{
+background:#5865F2;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+/* Section */
+
+section{
+padding:100px 8%;
+}
+
+.title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
+color:#b366ff;
+text-shadow:0 0 20px #8b00ff;
+}
+
+/* About */
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+/* Games */
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.game-card{
+background:#111;
+padding:30px;
+border:1px solid #8b00ff;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+}
+
+.game-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #8b00ff;
+}
+
+/* Videos */
+
+.videos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+}
+
+.video-card{
+background:#111;
+padding:15px;
+border-radius:15px;
+border:1px solid #8b00ff;
+}
+
+.video-card iframe{
+width:100%;
+height:250px;
+border:none;
+}
+
+/* Live */
+
+.live-box{
+text-align:center;
+padding:50px;
+background:#111;
+border-radius:20px;
+border:2px solid #ff0000;
+box-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+.live-dot{
+display:inline-block;
+width:15px;
+height:15px;
+background:red;
+border-radius:50%;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.5);}
+100%{transform:scale(1);}
+}
+
+/* Footer */
+
+footer{
+padding:30px;
+text-align:center;
+background:#000;
+border-top:1px solid #8b00ff;
+}
+
+footer p{
+color:#999;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.6rem;
+}
+
+nav ul{
+display:none;
+}
+
+.hero img{
+width:170px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">VENOMX-04</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#live">Live</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="logo.png" alt="VenomX Logo">
+
+<h1>VENOMX-04</h1>
+
+<p>Tamil Gaming • PUBG PC • ETS2 • Live Streams</p>
+
+<div class="btns">
+
+<a class="btn youtube"
+href="https://youtube.com/@venomx-04_ak"
+target="_blank">
+Subscribe
+</a>
+
+<a class="btn discord"
+href="https://discord.gg/cMmnt7NhcS"
+target="_blank">
+Join Discord
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About VenomX-04</h2>
+
+<div class="about">
+
+Welcome to VenomX-04! A Tamil gaming channel featuring PUBG PC, ETS2,
+live streams, gameplay videos, gaming highlights, challenges and more.
+
+Join the Venom Army and enjoy epic gaming adventures with a powerful
+gaming community.
+
+</div>
+
+</section>
+
+<section id="games">
+
+<h2 class="title">Featured Games</h2>
+
+<div class="games">
+
+<div class="game-card">
+<h3>PUBG PC</h3>
+<p>Competitive Gameplay</p>
+</div>
+
+<div class="game-card">
+<h3>ETS2</h3>
+<p>Truck Simulator Adventures</p>
+</div>
+
+<div class="game-card">
+<h3>GTA V</h3>
+<p>Open World Fun</p>
+</div>
+
+<div class="game-card">
+<h3>More Games</h3>
+<p>Action • Racing • Survival</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="videos">
+
+<h2 class="title">Latest Videos</h2>
+
+<div class="videos">
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=venomx-04_ak"></iframe>
+</div>
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=venomx-04_ak"></iframe>
+</div>
+
+</div>
+
+</section>
+
+<section id="live">
+
+<h2 class="title">Live Stream Status</h2>
+
+<div class="live-box">
+
+<h3>
+<span class="live-dot"></span>
+ LIVE STREAMS ON YOUTUBE
+</h3>
+
+<br>
+
+<p>
+Subscribe and turn on notifications to never miss a live stream.
+</p>
+
+<br>
+
+<a class="btn youtube"
+href="https://youtube.com/@venomx-04_ak"
+target="_blank">
+Watch Channel
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:#a855ff;">VENOMX-04</h2>
+
+<p>
+© 2026 VenomX-04 Gaming. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+console.log("VenomX-04 Website Loaded");
+
+window.addEventListener("scroll",()=>{
+
+const cards=document.querySelectorAll(".game-card");
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+card.style.opacity="1";
+card.style.transform="translateY(0)";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
