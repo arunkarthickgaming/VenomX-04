@@ -303,11 +303,9 @@ width:170px;
 
 <div class="btns">
 
-<a class="btn youtube"
-href="https://youtube.com/@venomx-04_ak"
-target="_blank">
+<button class="btn youtube" onclick="unlockProMods()">
 Subscribe
-</a>
+</button>
 
 <a class="btn discord"
 href="https://discord.gg/cMmnt7NhcS"
@@ -367,7 +365,7 @@ gaming community.
 
 </section>
 
-<section class="download">
+<section class="download" id="promodsSection" style="display:none;">
 
 <h2 class="section-title">ProMods Download</h2>
 
@@ -440,6 +438,23 @@ Watch Channel
 </footer>
 
 <script>
+
+function unlockProMods(){
+
+    document.getElementById("promodsSection").style.display = "block";
+
+    window.open(
+        "https://youtube.com/@venomx-04_ak",
+        "_blank"
+    );
+
+    setTimeout(() => {
+        document.getElementById("promodsSection")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+    },500);
+}
 
 console.log("VenomX-04 Website Loaded");
 
